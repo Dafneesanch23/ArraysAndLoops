@@ -22,6 +22,8 @@ const names = ["Dafne", "Berenice", "Sanchez", "Uscanga", "De encantador"];
 //     console.log(i);
 // }
 
+
+
 // for (let i= 1500; 1 >= 0; i--){
 //     console.log(i);
 // }
