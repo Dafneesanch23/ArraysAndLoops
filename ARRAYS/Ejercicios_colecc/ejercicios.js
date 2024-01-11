@@ -1,4 +1,4 @@
-// Sum of Resistors in Series
+// 1. Sum of Resistors in Series
  
 
 // Calculate the sum of all resistors connected in series.
@@ -33,7 +33,7 @@ function sumaResi(Resistencias) {
    console.log (`${resultado3} ohms`);
 
 
-// Given a number, return the number divided into its halves in an array.
+// 2. Given a number, return the number divided into its halves in an array.
  
 
 // Examples:
@@ -53,7 +53,7 @@ function sumaResi(Resistencias) {
  division(4);
  division(10);
 
-// Secret Society
+// 3. Secret Society
  
 
 // Find the name of a secret society based on the first letter of each member's name.
@@ -64,8 +64,25 @@ function sumaResi(Resistencias) {
 // - `secretName(['Phoebe', 'Ross', 'Chandler', 'Joey', 'Monica', 'Rachel'])` should return `'CJMPRR'`.
 // - `secretName(['Harry', 'Ron', 'Hermione'])` should return `'HRH'`.
 
+ function nameSecret(arrNames) {
+     const iniciales = arrNames.map(nombre => nombre.charAt(0));
+     return iniciales.join('');
+   }
+  
+   const nombres1 = ["Esperanza", "Franco", "Nia"];
+   const result1 = nameSecret(nombres1);
+   console.log(result1);
 
-// Online status
+   const nombres2 = ['Phoebe', 'Ross', 'Chandler', 'Joey', 'Monica', 'Rachel'];
+   const result2 = nameSecret(nombres2);
+   console.log(result2);
+
+   const nombres3 = ['Harry', 'Ron', 'Hermione'];
+   const result3 = nameSecret(nombres3);
+   console.log(result3);
+
+
+// 4. Online status
 
  // Display online status for a list of users.
  // Example:
@@ -88,7 +105,7 @@ const users = (['mockIng99', 'J0eyPunch', 'glassedFer']);
 const resultado = userStatus(users);
 console.log (resultado);
 
-// Array of Multiples
+// 5. Array of Multiples
  
 // Create a function that takes two parameters (number, length) and returns an array of length containing multiples of the number.
  
@@ -97,7 +114,9 @@ console.log (resultado);
 // - `arrayMultiplos(17, 6)` should return `[17, 34, 51, 68, 85, 102]`.
  
 
-// Positive dominance in Array
+
+
+// 6. Positive dominance in Array
  
 // Write a function to determine if an array is positively dominant.
 // An array is positively dominant when the majority of its elements are positive.
@@ -107,7 +126,32 @@ console.log (resultado);
 // - `positiveDom([-1, -3, -5, 4, 6767])` should return `false`.
  
 
-// Antipodal Average
+//1. loop por cada elemento
+//2. Total de positivos
+//3. Cantidad total y dividir entre 2
+//4. Comparar si más de la mitad de los número son positivos
+// Imprimir boolean
+
+const numArr = [-1000 -1, 50, 1, 2, 5];
+const negativeArra = [-100, -1, -50, -1 , 5, 2];
+
+function positiveArr(arr){
+    let positiveCount = 0;
+    arr.forEach((num) => {
+        if (num > 0){
+            positiveCount++;
+        }
+    })
+
+    const mid = arr.length/2;
+    return positiveCount>mid;
+
+}
+
+const res = positiveArr(negativeArra);
+console.log(res);
+
+// 7. Antipodal Average
  
 
 // Given an array, return a shorter array following these steps:
